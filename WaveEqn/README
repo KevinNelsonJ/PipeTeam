@@ -1,0 +1,13 @@
+To Compile:
+
+1.) Go to the build directory
+>cd build
+
+2.) run cmake on the root directory
+>cmake -DDEAL_II_DIR=/<your install directory> ..
+
+3.) run make
+>make
+
+4.) run the program
+>./WaveEqn
