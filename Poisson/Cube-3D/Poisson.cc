@@ -6,6 +6,7 @@
 #include <deal.II/grid/grid_generator.h>
 #include <deal.II/grid/tria_accessor.h>
 #include <deal.II/grid/tria_iterator.h>
+#include <deal.II/grid/grid_in.h>
 #include <deal.II/dofs/dof_accessor.h>
 #include <deal.II/fe/fe_q.h>
 #include <deal.II/dofs/dof_tools.h>
@@ -54,8 +55,8 @@ namespace Poission
         {}
         
     template<int dim> void PoissonEqn<dim>::make_grid() {
+
         // makes a simple hypercube grid to solve the system on
-        
         GridGenerator::hyper_cube(triangulation, -1, 1);
         triangulation.refine_global(5);
         
