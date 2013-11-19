@@ -26,6 +26,7 @@
 #include <deal.II/grid/tria_iterator.h>
 #include <deal.II/grid/tria_boundary_lib.h>
 #include <deal.II/grid/grid_in.h>
+#include <deal.II/grid/grid_out.h>
 
 #include <deal.II/dofs/dof_handler.h>
 #include <deal.II/dofs/dof_accessor.h>
@@ -676,6 +677,13 @@ namespace Step35
               << std::endl;
 
     boundary_indicators = triangulation.get_boundary_indicators();
+
+   {
+      // Output the mesh
+      std::ofstream out("data/zigzag.eps");
+      GridOut grid_out;
+      grid_out.write_eps(triangulation, out);
+    }
 
     dof_handler_velocity.distribute_dofs (fe_velocity);
     DoFRenumbering::boost::Cuthill_McKee (dof_handler_velocity);
