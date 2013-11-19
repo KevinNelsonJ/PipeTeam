@@ -92,6 +92,10 @@ class UCD_Parser:
             entry = self.line.split()
             entry = convert(entry, self.entry_types[entry[2]])
             
+            # strip the type of cell from the entry and place in the appropriate dictionary
+            # entry[1]:  boundary label
+            # entry[2]:  celltype e.g. 'quad'
+            # entry[3:]: the node labels for this cell
             self.cells[entry[2]][entry[0]] = [entry[1]] + entry[3:]
 
 
