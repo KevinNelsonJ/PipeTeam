@@ -1,0 +1,4 @@
+>>Chose material no <1> for surface: wall
+>>Chose material no <2> for surface: inlet
+>>Chose material no <3> for surface: outlet
+
