@@ -2324,7 +2324,7 @@ namespace Step33
       std::ofstream eps_output_file("data/mesh.eps");
       GridOut grid_out;
       grid_out.write_gnuplot(triangulation, gnu_output_file);
-      grid_out.write_gnuplot(triangulation, eps_output_file);
+      grid_out.write_eps(triangulation, eps_output_file);
     }
 
     // Size all of the fields.
