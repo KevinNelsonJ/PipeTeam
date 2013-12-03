@@ -2,7 +2,7 @@
 # ---------------------
 
 # The input grid 
-set mesh = slide.inp
+set mesh = slide.ucd
 
 # Stabilization parameter
 set diffusion power = 2.0
