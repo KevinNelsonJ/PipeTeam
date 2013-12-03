@@ -2320,10 +2320,11 @@ namespace Step33
     dof_handler.distribute_dofs (fe);
     
     {
-      std::ofstream output_file("data/mesh.eps");
+      std::ofstream gnu_output_file("data/mesh.gnu");
+      std::ofstream eps_output_file("data/mesh.eps");
       GridOut grid_out;
-      grid_out.write_eps(triangulation, output_file);
-      
+      grid_out.write_gnuplot(triangulation, gnu_output_file);
+      grid_out.write_gnuplot(triangulation, eps_output_file);
     }
 
     // Size all of the fields.
